@@ -34,5 +34,5 @@ export const midudev: Link = {
 
 export const creator: Link = {
     title: "100 proyectos JS",
-    url: "https://www.javascript100.dev/"
+    url: "https://javascript100.dev/"
 };
