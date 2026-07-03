@@ -1,5 +1,5 @@
 ---
-import { name, ig, midudev, creator, repository, x } from "@/data"
+import { repository, midudev, initiative } from "@/data"
 import { projects } from "@/data/projects"
 import Layout from "@/layouts/Layout.astro"
 import Link from "@/components/Link.astro"
@@ -8,37 +8,21 @@ import Card from "@/components/Card.astro"
 
 <Layout>
     <header class="flex flex-col items-center justify-center gap-0 xl:gap-3">
-        <h1>&nbsp;{name}&nbsp;</h1>
+        <h1>&nbsp;100 JS&nbsp;</h1>
         <p class="sm:max-w-[40ch] text-balance md:text-pretty text-center text-base text-stone-400">
-            Resolución de la iniciativa de <Link title={midudev.title} url={midudev.url} />: <Link
-                title={creator.title}
-                url={creator.url}
-            />, desarrollados con JavaScript puro, HTML, CSS y Tailwind CSS en esta versión.
+            Solution for the <Link title={midudev.title} url={midudev.url} /> initiative: <Link
+                title={initiative.title}
+                url={initiative.url}
+            />, developed using pure JavaScript, HTML, CSS, and Tailwind CSS in this version.
         </p>
     </header>
 
-    <menu class="mt-16 flex items-center justify-between gap-3 font-mono text-xs uppercase">
+    <nav class="mt-16 flex items-center justify-between gap-3 font-mono text-xs uppercase">
         <span class="text-stone-400">{projects.length}/100</span>
-        <nav class="ms-auto flex items-center justify-center gap-6">
-            <Link title={`${repository.label!} ↗`} url={repository.url} />
-            <Link title={`${ig.title} ↗`} url={ig.url} />
-            <Link title={`${x.title} ↗`} url={x.url} />
-        </nav>
-    </menu>
+        <Link title={`${repository.title} ↗`} url={repository.url} />
+    </nav>
 
     <section class="mt-4 xl:mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {
-            projects.map((item, index) => (
-                <Card
-                    id={index + 1}
-                    title={item.title}
-                    url={item.url}
-                    description={item.description}
-                    created={item.created}
-                    image={item.image}
-                    tags={item.tags}
-                />
-            ))
-        }
+        {projects.map((item, index) => <Card id={index + 1} title={item.title} url={item.url} image={item.image} />)}
     </section>
 </Layout>

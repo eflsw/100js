@@ -6,7 +6,7 @@ interface Number {
 }
 
 type Props = Number & Project
-const { id, title, url, description, created, image, tags } = Astro.props as Props
+const { id, title, url, image } = Astro.props as Props
 const formattedId = id?.toString().padStart(3, "0")
 ---
 
@@ -22,9 +22,4 @@ const formattedId = id?.toString().padStart(3, "0")
         >
     </a>
     <hgroup class="mt-2.5 font-semibold tracking-tight text-lg">{title}</hgroup>
-    <p class="mt-1.5 hidden 2xl:flex text-pretty text-sm text-stone-400">{description}</p>
-    <div class="mt-2 flex flex-wrap items-center gap-1">
-        <span title="Fecha de creación" class="tag text-stone-100 bg-stone-200/20">{created}</span>
-        {tags.map((tag) => <span class="tag text-amber-100 bg-amber-200/20">{tag}</span>)}
-    </div>
 </div>

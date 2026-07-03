@@ -18,7 +18,7 @@ export const midudev: Link = {
     url: "https://midu.dev"
 }
 
-export const initative: Link = {
-    title: "100 proyectos JS",
+export const initiative: Link = {
+    title: "100 JS Projects",
     url: "https://javascript100.dev"
 }
