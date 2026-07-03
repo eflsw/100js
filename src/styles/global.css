@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Onest';
-    src: url('/fonts/Onest.ttf');
+    font-family: "Onest";
+    src: url("/fonts/Onest.ttf");
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono.ttf');
+    font-family: "Geist Mono";
+    src: url("/fonts/GeistMono.ttf");
 }
 
 @theme {
     --font-sans: "Onest", sans-serif;
     --font-mono: "Geist Mono", monospace;
-    --text-base: .93rem;
+    --text-base: 0.93rem;
 }
 
 * {
     color-scheme: dark;
     scrollbar-width: thin !important;
-    scrollbar-color: rgb(255, 185, 0, .23) #0c0900;
+    scrollbar-color: rgb(255, 185, 0, 0.23) #0c0900;
 }
 
 h1 {
-    @apply font-bold tracking-tighter text-center text-[4.3rem] xl:text-7xl 2xl:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-amber-300 to-amber-950/30 select-none;
+    @apply font-bold tracking-tighter text-center text-[4.3rem] xl:text-7xl 2xl:text-8xl text-transparent bg-clip-text bg-linear-to-b from-amber-300 to-amber-950/30 select-none;
 }
 
 .tag {

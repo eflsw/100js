@@ -1,4 +1,4 @@
-import type { Project } from "../types";
+import type { Project } from "@/types"
 
 export const projects: Project[] = [
     {
@@ -7,12 +7,7 @@ export const projects: Project[] = [
         description:
             "Simulación del gesto de deslizar tarjetas de Tinder, permitiendo aceptar o rechazar elementos con una interacción fluida y dinámica.",
         image: "https://100js-dev.vercel.app/1-tinder-swipe/preview.png",
-        tags: [
-            "DOM",
-            "Animaciones con Gestos",
-            "Eventos Mouse & Touch",
-            "Transiciones CSS"
-        ],
+        tags: ["DOM", "Animaciones con Gestos", "Eventos Mouse & Touch", "Transiciones CSS"],
         created: "13/10/25"
     } /*
     {
@@ -111,4 +106,4 @@ export const projects: Project[] = [
         tags: ['IA Local', 'Reconocimiento de Voz', 'SpeechSynthesis'],
         created: '00/00/25'
     }, */
-];
+]
