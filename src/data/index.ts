@@ -1,38 +1,24 @@
-import type { Link } from "@/types"
+import type { Link, SiteConfig } from "@/types"
 
-export const name = "100 JS"
-export const title = "100 proyectos de JavaScript"
-export const description = ""
-export const preview = "https://100js-dev.vercel.app/preview.png"
-
-export const site: Link = {
-    title: name,
-    url: "https://100js-dev.vercel.app",
-    label: "100js-dev.vercel.app"
+export const site: SiteConfig = {
+    title: "100 JavaScript Projects",
+    description: "",
+    url: "https://100jsw.vercel.app",
+    preview: "https://100jsw.vercel.app/images/preview.png",
+    lang: "en"
 }
 
 export const repository: Link = {
     title: "GitHub",
-    url: "https://github.com/e-iii/100-js",
-    label: "Repositorio"
-}
-
-export const ig: Link = {
-    title: "Instagram",
-    url: "https://instagram.com/e_iii___"
-}
-
-export const x: Link = {
-    title: "X",
-    url: "https://x.com/e_iii___"
+    url: "https://github.com/eflsw/100js"
 }
 
 export const midudev: Link = {
     title: "Midudev",
-    url: "https://midu.dev/"
+    url: "https://midu.dev"
 }
 
-export const creator: Link = {
+export const initative: Link = {
     title: "100 proyectos JS",
-    url: "https://javascript100.dev/"
+    url: "https://javascript100.dev"
 }
