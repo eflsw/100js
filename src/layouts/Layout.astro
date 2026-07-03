@@ -1,38 +1,42 @@
 ---
-import '../styles/global.css';
-import { title, preview, description, site } from '../data';
+import "@/styles/global.css"
+import { title, preview, description, site } from "@/data"
 
 interface Props {
-	page?: string
+    page?: string
 }
 
-const { page = title } = Astro.props as Props;
+const { page = title } = Astro.props as Props
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="icon" href="/favicon.ico">
-	<meta name="generator" content={Astro.generator} />
-	<title>{page}</title>
-	<meta name="title" content={page} />
-	<meta name="description" content={description} />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={site.url} />
-	<meta property="og:title" content={page} />
-	<meta property="og:description" content={description} />
-	<meta property="og:image" content={preview} />
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content={site.url} />
-	<meta property="twitter:title" content={page} />
-	<meta property="twitter:description" content={description} />
-	<meta property="twitter:image" content={preview} />
-</head>
-<body class="w-full min-h-dvh relative px-6 pt-20 pb-16 sm:px-9 md:px-12 lg:px-14 lg:pt-20 xl:px-30 xl:pt-30 2xl:px-45 text-stone-200 bg-[#0c0900] selection:text-white selection:bg-amber-400/15">
-	<div class="-z-30 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_130px,#533c0c4d,transparent)]"></div>
-	<slot />
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{page}</title>
+        <meta name="title" content={page} />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={site.url} />
+        <meta property="og:title" content={page} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={preview} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={site.url} />
+        <meta property="twitter:title" content={page} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={preview} />
+    </head>
+    <body
+        class="w-full min-h-dvh relative px-6 pt-20 pb-16 sm:px-9 md:px-12 lg:px-14 lg:pt-20 xl:px-30 xl:pt-30 2xl:px-45 text-stone-200 bg-[#0c0900] selection:text-white selection:bg-amber-400/15"
+    >
+        <div
+            class="-z-30 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_130px,#533c0c4d,transparent)]"
+        >
+        </div>
+        <slot />
+    </body>
 </html>
