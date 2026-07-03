@@ -1,34 +1,31 @@
 ---
 import "@/styles/global.css"
-import { title, preview, description, site } from "@/data"
+import { site } from "@/data"
 
-interface Props {
-    page?: string
-}
-
-const { page = title } = Astro.props as Props
+const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={site.lang} class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
+        <link rel="canonical" href={canonical} />
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        <title>{page}</title>
-        <meta name="title" content={page} />
-        <meta name="description" content={description} />
+        <title>{site.title}</title>
+        <meta name="title" content={site.title} />
+        <meta name="description" content={site.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={site.url} />
-        <meta property="og:title" content={page} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={preview} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={site.url} />
-        <meta property="twitter:title" content={page} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={preview} />
+        <meta property="og:title" content={site.title} />
+        <meta property="og:description" content={site.description} />
+        <meta property="og:image" content={site.preview} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={site.url} />
+        <meta name="twitter:title" content={site.title} />
+        <meta name="twitter:description" content={site.description} />
+        <meta name="twitter:image" content={site.preview} />
     </head>
     <body
         class="w-full min-h-dvh relative px-6 pt-20 pb-16 sm:px-9 md:px-12 lg:px-14 lg:pt-20 xl:px-30 xl:pt-30 2xl:px-45 text-stone-200 bg-[#0c0900] selection:text-white selection:bg-amber-400/15"
