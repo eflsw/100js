@@ -1,19 +1,12 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: "Onest";
-    src: url("/fonts/Onest.ttf");
-}
-
-@font-face {
-    font-family: "Geist Mono";
-    src: url("/fonts/GeistMono.ttf");
-}
-
 @theme {
-    --font-sans: "Onest", sans-serif;
-    --font-mono: "Geist Mono", monospace;
     --text-base: 0.93rem;
+}
+
+@theme inline {
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
 }
 
 * {

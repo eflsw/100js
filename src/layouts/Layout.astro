@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css"
+import { Font } from "astro:assets"
 import { site } from "@/data"
 
 const canonical = new URL(Astro.url.pathname, Astro.site)
@@ -26,6 +27,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
         <meta name="twitter:title" content={site.title} />
         <meta name="twitter:description" content={site.description} />
         <meta name="twitter:image" content={site.preview} />
+        <Font cssVariable="--font-sans" />
+        <Font cssVariable="--font-mono" />
     </head>
     <body
         class="w-full min-h-dvh relative px-6 pt-20 pb-16 sm:px-9 md:px-12 lg:px-14 lg:pt-20 xl:px-30 xl:pt-30 2xl:px-45 text-stone-200 bg-[#0c0900] selection:text-white selection:bg-amber-400/15"
