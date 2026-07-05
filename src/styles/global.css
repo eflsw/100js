@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --text-base: 0.93rem;
+    --text-base: 0.95rem;
 }
 
 @theme inline {
@@ -9,16 +9,14 @@
     --font-mono: var(--font-mono);
 }
 
-* {
-    color-scheme: dark;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgb(255, 185, 0, 0.23) #0c0900;
+@layer base {
+    * {
+        color-scheme: dark;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(255, 185, 0, 0.3) #0c0900;
+    }
 }
 
-h1 {
-    @apply font-bold tracking-tighter text-center text-[4.3rem] xl:text-7xl 2xl:text-8xl text-transparent bg-clip-text bg-linear-to-b from-amber-300 to-amber-950/30 select-none;
-}
-
-.tag {
-    @apply px-2 py-0.5 font-mono text-nowrap tracking-tighter text-xs rounded-full select-none;
+@utility tag {
+    @apply px-2 py-0.5 font-mono text-xs text-nowrap tracking-tighter rounded-full select-none;
 }
