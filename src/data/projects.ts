@@ -3,8 +3,8 @@ import type { Project } from "@/types"
 export const projects: Project[] = [
     {
         title: "Tinder Swipe",
-        url: "https://100jsw.vercel.app/1-tinder-swipe",
-        image: "https://100jsw.vercel.app/1-tinder-swipe/preview.png"
+        url: "https://100jsw.vercel.app/swipe",
+        image: "https://100jsw.vercel.app/swipe/preview.png"
     } /*
     {
         title: 'Arkanoid Game',
