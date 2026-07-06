@@ -11,15 +11,15 @@ const formattedId = id?.toString().padStart(3, "0")
 ---
 
 <div>
-    <a href={url} class="block relative aspect-video rounded-xl overflow-hidden group transition duration-200" target="_blank">
+    <a href={url} class="group aspect-video relative block rounded-xl overflow-hidden transition duration-200" target="_blank">
         <img
             src={image}
             alt={`${title} - Proyecto #${formattedId}`}
-            class="w-full h-full rounded-xl object-cover object-center transition duration-200 group-hover:scale-105"
+            class="size-full object-cover object-center rounded-xl transition duration-200 group-hover:scale-105"
         />
-        <span class="tag absolute bottom-1.5 right-1.5 font-medium text-stone-950 bg-stone-50/80 backdrop-blur-3xl"
+        <span class="tag absolute bottom-1.5 right-1.5 font-medium text-stone-950 bg-stone-50/80 backdrop-blur-xl"
             >#{formattedId}</span
         >
     </a>
-    <hgroup class="mt-2.5 font-semibold tracking-tight text-lg">{title}</hgroup>
+    <hgroup class="mt-2.5 font-medium tracking-tight">{title}</hgroup>
 </div>
