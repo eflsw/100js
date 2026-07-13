@@ -3,9 +3,9 @@
 }
 
 article {
-    cursor: grab;
     inset: 0;
     z-index: 2;
+    cursor: grab;
 
     &.go-left {
         transform: translateX(-150%) rotate(-30deg) !important;
